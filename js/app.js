@@ -18,21 +18,20 @@
 //   # sales/hr = random(min, max)
 //   #cookie/hr = # sales/hr * avg cookies/sale
 //  total += cookie/hr
-//  locSales.push(#cookies/hr);
-
-//From this source; https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random#Getting_a_random_integer_between_two_values
+//  add cookie/hr to locSales
 
 
 var pike = {
+  ulEl: document.getElementById('pike'),
   custMin: 23,
   custMax: 65,
   cookieAvg: 6.3,
   cookieTotal: 0,
   locSales: [],
-  time: [600, 700, 800, 900, 1000, 1100, 1200, 1300, 1400, 1500, 1600, 1700, 1800, 1900, 2000],
+  time: ['6 AM', '7AM', '8AM', '9AM', '10AM', '11AM', '12PM', '1PM', '2PM', '3PM', '4PM', '5PM', '6PM', '7PM', '8PM'],
 
   getRandomInt: function(min, max){
-    return Math.round(Math.random() * (min - max)) + min; //The maximum is exclusive and the minimum is inclusive
+    return Math.round(Math.random() * (max-min+1)) + min;
   },
 
   cookieCount: function(){
@@ -41,8 +40,26 @@ var pike = {
       var cookieHr = Math.round(salesHr * this.cookieAvg);
       this.cookieTotal += cookieHr;
       this.locSales.push(cookieHr);
+      console.log(salesHr);
     }
-  }
+  },
+  render: function(){
+    for(var index = 0; index < this.time.length; index++){
+      // render function
+      // three things
+      // 1. create an element - li
+      var liEl = document.createElement('li');
+    
+      // 2. give it content - name
+      liEl.textContent = `${this.time[index]}: ${this.locSales[index]} cookies`;
+    
+      // 3. append it to the DOM
+      this.ulEl.appendChild(liEl);
+
+    }
+
+  },
 };
 
 pike.cookieCount();
+pike.render();
