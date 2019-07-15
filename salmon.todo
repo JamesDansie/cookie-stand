@@ -16,15 +16,15 @@ Index Page
 
 Sales Page
 ☐ display individual stores with a list
-☐ You are making five object literals in your JavaScript today. Consider what would be an efficient process for building those out.
-☐ input; min/max cust and avg cookies
-☐ generate random # of customers per hour
+✔ You are making five object literals in your JavaScript today. Consider what would be an efficient process for building those out. @done (7/15/2019, 4:21:15 PM)
+✔ input; min/max cust and avg cookies @done (7/15/2019, 4:21:17 PM)
+✔ generate random # of customers per hour @done (7/15/2019, 4:21:18 PM)
 ☐ store the results for each location in a seperate array
 ☐ display the results in ul in the browser with; 'time: # cookies' and total per day per location
 
 
 Technical Requirements
-☐ Working on a non-master branch, with regular commit history
+✔ Working on a non-master branch, with regular commit history @done (7/15/2019, 3:40:06 PM)
 ☐ Good use of Object Literals (no constructors allowed today); one for each store model; properties/values and methods are correctly constructed and given meaningful names
 ☐ Use template literals in your JS logic to render the stores as lists on the sales page
 
