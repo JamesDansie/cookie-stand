@@ -96,11 +96,17 @@ Location.prototype.renderTable = function(){
   trEl.appendChild(thEl);
 
   //looping through the sale array
+  var tdEl = document.createElement('th');
   for(var index = 0; index < time.length; index++){
-    thEl = document.createElement('th');
-    thEl.textContent = this.locSalesArr[index];
-    trEl.appendChild(thEl);
+    tdEl = document.createElement('th');
+    tdEl.textContent = this.locSalesArr[index];
+    trEl.appendChild(tdEl);
   }
+
+  //Adding the total at the end
+  tdEl = document.createElement('th');
+  tdEl.textContent = this.cookieTotalNum;
+  trEl.appendChild(tdEl);
 };
 
 //*************Helper Functions */
@@ -121,6 +127,11 @@ function makeHeader(){
     thEl.textContent = time[i];
     trEl.appendChild(thEl);
   }
+
+  //Writing the total at the end
+  thEl = document.createElement('th');
+  thEl.textContent = 'Total';
+  trEl.appendChild(thEl);
 }
 
 new Location('pike', 23, 65, 6.3);
