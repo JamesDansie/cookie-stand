@@ -116,54 +116,148 @@ var sea = {
 
 // Seattle Center	11	38	3.7
 var center = {
-    ulEl: document.getElementById('center'),
-    custMin: 11,
-    custMax: 38,
-    cookieAvg: 3.7,
-    cookieTotal: 0,
-    locSales: [],
-    time: ['6 AM', '7AM', '8AM', '9AM', '10AM', '11AM', '12PM', '1PM', '2PM', '3PM', '4PM', '5PM', '6PM', '7PM', '8PM'],
-  
-    getRandomInt: function(min, max){
-      return Math.round(Math.random() * (max-min+1)) + min;
-    },
-  
-    cookieCount: function(){
-      for(var index = 0; index < this.time.length; index++){
-        var salesHr = this.getRandomInt(this.custMin, this.custMax);
-        var cookieHr = Math.round(salesHr * this.cookieAvg);
-        this.cookieTotal += cookieHr;
-        this.locSales.push(cookieHr);
-        console.log(salesHr);
-      }
-    },
-  
-    render: function(){
-      for(var index = 0; index < this.time.length; index++){
-        // render function
-        // three things
-        // 1. create an element - li
-        var liEl = document.createElement('li');
-  
-        // 2. give it content - name
-        liEl.textContent = `${this.time[index]}: ${this.locSales[index]} cookies`;
-  
-        // 3. append it to the DOM
-        this.ulEl.appendChild(liEl);
-      }
+  ulEl: document.getElementById('center'),
+  custMin: 11,
+  custMax: 38,
+  cookieAvg: 3.7,
+  cookieTotal: 0,
+  locSales: [],
+  time: ['6 AM', '7AM', '8AM', '9AM', '10AM', '11AM', '12PM', '1PM', '2PM', '3PM', '4PM', '5PM', '6PM', '7PM', '8PM'],
+
+  getRandomInt: function(min, max){
+    return Math.round(Math.random() * (max-min+1)) + min;
+  },
+
+  cookieCount: function(){
+    for(var index = 0; index < this.time.length; index++){
+      var salesHr = this.getRandomInt(this.custMin, this.custMax);
+      var cookieHr = Math.round(salesHr * this.cookieAvg);
+      this.cookieTotal += cookieHr;
+      this.locSales.push(cookieHr);
+      console.log(salesHr);
+    }
+  },
+
+  render: function(){
+    for(var index = 0; index < this.time.length; index++){
+      // render function
+      // three things
+      // 1. create an element - li
       var liEl = document.createElement('li');
-  
+
       // 2. give it content - name
-      liEl.textContent = `Total cookes: ${this.cookieTotal}`;
-  
+      liEl.textContent = `${this.time[index]}: ${this.locSales[index]} cookies`;
+
       // 3. append it to the DOM
       this.ulEl.appendChild(liEl);
-    },
-  };
+    }
+    var liEl = document.createElement('li');
 
-var stores = [pike, sea, center];
+    // 2. give it content - name
+    liEl.textContent = `Total cookes: ${this.cookieTotal}`;
+
+    // 3. append it to the DOM
+    this.ulEl.appendChild(liEl);
+  },
+};
+
+// Capitol Hill	20	38	2.3
+var capHill = {
+  ulEl: document.getElementById('capHill'),
+  custMin: 20,
+  custMax: 38,
+  cookieAvg: 2.3,
+  cookieTotal: 0,
+  locSales: [],
+  time: ['6 AM', '7AM', '8AM', '9AM', '10AM', '11AM', '12PM', '1PM', '2PM', '3PM', '4PM', '5PM', '6PM', '7PM', '8PM'],
+
+  getRandomInt: function(min, max){
+    return Math.round(Math.random() * (max-min+1)) + min;
+  },
+
+  cookieCount: function(){
+    for(var index = 0; index < this.time.length; index++){
+      var salesHr = this.getRandomInt(this.custMin, this.custMax);
+      var cookieHr = Math.round(salesHr * this.cookieAvg);
+      this.cookieTotal += cookieHr;
+      this.locSales.push(cookieHr);
+      console.log(salesHr);
+    }
+  },
+
+  render: function(){
+    for(var index = 0; index < this.time.length; index++){
+      // render function
+      // three things
+      // 1. create an element - li
+      var liEl = document.createElement('li');
+
+      // 2. give it content - name
+      liEl.textContent = `${this.time[index]}: ${this.locSales[index]} cookies`;
+
+      // 3. append it to the DOM
+      this.ulEl.appendChild(liEl);
+    }
+    var liEl = document.createElement('li');
+
+    // 2. give it content - name
+    liEl.textContent = `Total cookes: ${this.cookieTotal}`;
+
+    // 3. append it to the DOM
+    this.ulEl.appendChild(liEl);
+  },
+};
+
+// Alki	2	16	4.6
+var alki = {
+  ulEl: document.getElementById('alki'),
+  custMin: 2,
+  custMax: 16,
+  cookieAvg: 4.6,
+  cookieTotal: 0,
+  locSales: [],
+  time: ['6 AM', '7AM', '8AM', '9AM', '10AM', '11AM', '12PM', '1PM', '2PM', '3PM', '4PM', '5PM', '6PM', '7PM', '8PM'],
+
+  getRandomInt: function(min, max){
+    return Math.round(Math.random() * (max-min+1)) + min;
+  },
+
+  cookieCount: function(){
+    for(var index = 0; index < this.time.length; index++){
+      var salesHr = this.getRandomInt(this.custMin, this.custMax);
+      var cookieHr = Math.round(salesHr * this.cookieAvg);
+      this.cookieTotal += cookieHr;
+      this.locSales.push(cookieHr);
+      console.log(salesHr);
+    }
+  },
+
+  render: function(){
+    for(var index = 0; index < this.time.length; index++){
+      // render function
+      // three things
+      // 1. create an element - li
+      var liEl = document.createElement('li');
+
+      // 2. give it content - name
+      liEl.textContent = `${this.time[index]}: ${this.locSales[index]} cookies`;
+
+      // 3. append it to the DOM
+      this.ulEl.appendChild(liEl);
+    }
+    var liEl = document.createElement('li');
+
+    // 2. give it content - name
+    liEl.textContent = `Total cookes: ${this.cookieTotal}`;
+
+    // 3. append it to the DOM
+    this.ulEl.appendChild(liEl);
+  },
+};
+
+var stores = [pike, sea, center, capHill, alki];
 for(var index = 0; index < stores.length; index++){
-    stores[index].cookieCount();
-    stores[index].render();
+  stores[index].cookieCount();
+  stores[index].render();
 }
 
