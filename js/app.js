@@ -30,6 +30,7 @@ var pike = {
   locSales: [],
   time: ['6 AM', '7AM', '8AM', '9AM', '10AM', '11AM', '12PM', '1PM', '2PM', '3PM', '4PM', '5PM', '6PM', '7PM', '8PM'],
 
+  //got this functino from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
   getRandomInt: function(min, max){
     return Math.round(Math.random() * (max-min+1)) + min;
   },
@@ -46,6 +47,7 @@ var pike = {
 
   render: function(){
     for(var index = 0; index < this.time.length; index++){
+      //got this layout from today's notes
       // render function
       // three things
       // 1. create an element - li
@@ -57,7 +59,7 @@ var pike = {
       // 3. append it to the DOM
       this.ulEl.appendChild(liEl);
     }
-    var liEl = document.createElement('li');
+    liEl = document.createElement('li');
 
     // 2. give it content - name
     liEl.textContent = `Total cookes: ${this.cookieTotal}`;
@@ -77,6 +79,7 @@ var sea = {
   locSales: [],
   time: ['6 AM', '7AM', '8AM', '9AM', '10AM', '11AM', '12PM', '1PM', '2PM', '3PM', '4PM', '5PM', '6PM', '7PM', '8PM'],
 
+  //got this functino from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
   getRandomInt: function(min, max){
     return Math.round(Math.random() * (max-min+1)) + min;
   },
@@ -93,6 +96,7 @@ var sea = {
 
   render: function(){
     for(var index = 0; index < this.time.length; index++){
+      //got this layout from today's notes
       // render function
       // three things
       // 1. create an element - li
@@ -104,7 +108,7 @@ var sea = {
       // 3. append it to the DOM
       this.ulEl.appendChild(liEl);
     }
-    var liEl = document.createElement('li');
+    liEl = document.createElement('li');
 
     // 2. give it content - name
     liEl.textContent = `Total cookes: ${this.cookieTotal}`;
@@ -124,6 +128,7 @@ var center = {
   locSales: [],
   time: ['6 AM', '7AM', '8AM', '9AM', '10AM', '11AM', '12PM', '1PM', '2PM', '3PM', '4PM', '5PM', '6PM', '7PM', '8PM'],
 
+  //got this functino from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
   getRandomInt: function(min, max){
     return Math.round(Math.random() * (max-min+1)) + min;
   },
@@ -140,6 +145,7 @@ var center = {
 
   render: function(){
     for(var index = 0; index < this.time.length; index++){
+      //got this layout from today's notes
       // render function
       // three things
       // 1. create an element - li
@@ -151,7 +157,7 @@ var center = {
       // 3. append it to the DOM
       this.ulEl.appendChild(liEl);
     }
-    var liEl = document.createElement('li');
+    liEl = document.createElement('li');
 
     // 2. give it content - name
     liEl.textContent = `Total cookes: ${this.cookieTotal}`;
@@ -171,6 +177,7 @@ var capHill = {
   locSales: [],
   time: ['6 AM', '7AM', '8AM', '9AM', '10AM', '11AM', '12PM', '1PM', '2PM', '3PM', '4PM', '5PM', '6PM', '7PM', '8PM'],
 
+  //got this functino from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
   getRandomInt: function(min, max){
     return Math.round(Math.random() * (max-min+1)) + min;
   },
@@ -187,6 +194,7 @@ var capHill = {
 
   render: function(){
     for(var index = 0; index < this.time.length; index++){
+      //got this layout from today's notes
       // render function
       // three things
       // 1. create an element - li
@@ -198,7 +206,7 @@ var capHill = {
       // 3. append it to the DOM
       this.ulEl.appendChild(liEl);
     }
-    var liEl = document.createElement('li');
+    liEl = document.createElement('li');
 
     // 2. give it content - name
     liEl.textContent = `Total cookes: ${this.cookieTotal}`;
@@ -218,6 +226,7 @@ var alki = {
   locSales: [],
   time: ['6 AM', '7AM', '8AM', '9AM', '10AM', '11AM', '12PM', '1PM', '2PM', '3PM', '4PM', '5PM', '6PM', '7PM', '8PM'],
 
+  //got this functino from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
   getRandomInt: function(min, max){
     return Math.round(Math.random() * (max-min+1)) + min;
   },
@@ -234,6 +243,7 @@ var alki = {
 
   render: function(){
     for(var index = 0; index < this.time.length; index++){
+      //got this layout from today's notes
       // render function
       // three things
       // 1. create an element - li
@@ -245,7 +255,7 @@ var alki = {
       // 3. append it to the DOM
       this.ulEl.appendChild(liEl);
     }
-    var liEl = document.createElement('li');
+    liEl = document.createElement('li');
 
     // 2. give it content - name
     liEl.textContent = `Total cookes: ${this.cookieTotal}`;
