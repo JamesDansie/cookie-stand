@@ -1,5 +1,39 @@
+*{
+    border: solid 1px;
+}
+header{
+    width: 100%;
+}
+
+h1{
+    font-size: 36px;
+    text-align: center;
+    font-weight: bold;
+}
+h2{
+    font-size: 24px;
+    font-weight: bold;
+    padding-top: 12px;
+    clear: both;
+}
 h3{
     font-size: 24px;
     font-weight: bold;
     padding-top: 12px;
+    clear: left;
+}
+li{
+    float: left;
+}
+li a{
+    display:block;
+    color: green;
+    text-align: center;
+    padding: 10px 12px;
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
