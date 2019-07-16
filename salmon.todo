@@ -4,18 +4,27 @@ Initial
 
 Index Page
 ☐ wireframe a quick page for the general public
+☐ use the salmon pic
+☐ colorful, eye catching, color scheme
+☐ custom google font for highlights
+☐ san-serif for data
+☐ serif for text
+☐ each font is a different color
+☐ back ground color for default
+☐ background color for elements
+☐ typical business stuff; locations, hours, contact info
 
-Owner Page
-☐ display individual stores with a list
-☐ You are making five object literals in your JavaScript today. Consider what would be an efficient process for building those out.
+Sales Page
+✔ display individual stores with a list @done (7/15/2019, 4:42:25 PM)
+✔ You are making five object literals in your JavaScript today. Consider what would be an efficient process for building those out. @done (7/15/2019, 4:21:15 PM)
+✔ input; min/max cust and avg cookies @done (7/15/2019, 4:21:17 PM)
+✔ generate random # of customers per hour @done (7/15/2019, 4:21:18 PM)
+✔ store the results for each location in a seperate array @done (7/15/2019, 4:42:04 PM)
+✔ display the results in ul in the browser with; 'time: # cookies' and total per day per location @done (7/15/2019, 4:42:08 PM)
 
-User Stories (MVP)
-☐ As a user, I want a webpage that displays individual store data for my Salmon Cookie Shops, so that I can be informed about how to run my business
-☐ As a developer, I want to represent the store data in a list format on the webpage, so my client can view the information
-☐ As a developer, I want to use object-oriented programming to build this site, so that the site will be more effective and the code will be easier to read and understand
+
 Technical Requirements
-✔ New repository properly set up with a license and README, and cloned to local machine @done (7/15/2019, 12:33:47 PM)
-☐ Working on a non-master branch, with regular commit history
-☐ Good use of Object Literals (no constructors allowed today); one for each store model; properties/values and methods are correctly constructed and given meaningful names
-☐ Main page meets requirements of the problem domain
-☐ Use template literals in your JS logic to render the stores as lists on the sales page
+✔ Working on a non-master branch, with regular commit history @done (7/15/2019, 3:40:06 PM)
+✔ Good use of Object Literals (no constructors allowed today); one for each store model; properties/values and methods are correctly constructed and given meaningful names @done (7/15/2019, 4:42:19 PM)
+✔ Use template literals in your JS logic to render the stores as lists on the sales page @done (7/15/2019, 4:42:16 PM)
+
