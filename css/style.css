@@ -36,6 +36,14 @@ li a{
     text-align: center;
     padding: 10px 12px;
 }
+td{
+    text-align: center;
+}
+th{
+    font-weight: bold;
+    font-size: 18px;
+    padding: 5px 10px 5px 10px;
+}
 ul{
     list-style-type: none;
     margin: 0;

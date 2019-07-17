@@ -1,6 +1,5 @@
 Initial
-✔ make repo @done (7/15/2019, 12:33:49 PM)
-✔ setup files - gitignore eslint etc @done (7/15/2019, 12:33:51 PM)
+✔ make a branch @done (7/16/2019, 2:04:11 PM)
 
 Index Page
 ☐ wireframe a quick page for the general public
@@ -15,16 +14,13 @@ Index Page
 ☐ typical business stuff; locations, hours, contact info
 
 Sales Page
-✔ display individual stores with a list @done (7/15/2019, 4:42:25 PM)
-✔ You are making five object literals in your JavaScript today. Consider what would be an efficient process for building those out. @done (7/15/2019, 4:21:15 PM)
-✔ input; min/max cust and avg cookies @done (7/15/2019, 4:21:17 PM)
-✔ generate random # of customers per hour @done (7/15/2019, 4:21:18 PM)
-✔ store the results for each location in a seperate array @done (7/15/2019, 4:42:04 PM)
-✔ display the results in ul in the browser with; 'time: # cookies' and total per day per location @done (7/15/2019, 4:42:08 PM)
+✔ Make a table of sales @done (7/16/2019, 3:15:49 PM)
+    ✔ hours up top locations down the side @done (7/16/2019, 3:15:45 PM)
+    ✔ total at the end @done (7/16/2019, 4:24:48 PM)
 
 
 Technical Requirements
-✔ Working on a non-master branch, with regular commit history @done (7/15/2019, 3:40:06 PM)
-✔ Good use of Object Literals (no constructors allowed today); one for each store model; properties/values and methods are correctly constructed and given meaningful names @done (7/15/2019, 4:42:19 PM)
-✔ Use template literals in your JS logic to render the stores as lists on the sales page @done (7/15/2019, 4:42:16 PM)
-
+✔ Remake with a constructor @done (7/16/2019, 2:25:37 PM)
+✔ loop through constructor to build table @done (7/16/2019, 3:15:56 PM)
+✔ each instance with a sepearte render @done (7/16/2019, 3:16:01 PM)
+✔ header and footer with a seperate call @done (7/16/2019, 4:24:50 PM)
