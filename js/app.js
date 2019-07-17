@@ -147,18 +147,31 @@ formEl.addEventListener('submit', function(e){
   var custMax = e.target.customersMaxPerHour.value;
   var cookieAvg = e.target.cookieAvgPerSale.value;
 
+  //convert input to numbers
   custMin = Number(custMin);
   custMax = Number(custMax);
   cookieAvg = Number(cookieAvg);
 
-  var i = tableEl.rows.length;
-  console.log(i-1);
-  tableEl.deleteRow(i-1);
+  //input validation is not NaN = true
+  var test = !isNaN(custMin) && !isNaN(custMax) && !isNaN(cookieAvg);
+  if(test){
+    //delete the last row/footer
+    var i = tableEl.rows.length;
+    //zero based so -1
+    console.log(i-1);
+    tableEl.deleteRow(i-1);
 
-  new CookieLocation(username, custMin, custMax, cookieAvg);
-  var j = tableEl.rows.length;
-  locationsArr[j-1].renderTable();
-  makeFooter();
+    //Make a new store and render it
+    new CookieLocation(username, custMin, custMax, cookieAvg);
+    //need to redeclare the varible or it points to the wrong location
+    var j = tableEl.rows.length;
+    locationsArr[j-1].renderTable();
+
+    //make a new footer
+    makeFooter();
+  } else {
+    alert('What kind of input is that?!');
+  }
 
 });
 
