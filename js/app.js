@@ -120,15 +120,16 @@ function makeFooter(){
   thEl.textContent = 'Sum';
   trEl.appendChild(thEl);
 
+  var tdEl = document.createElement('td');
   //Writing the time stample for the rest of the header
   for(var i = 0; i < time.length; i++){
-    thEl = document.createElement('th');
+    tdEl = document.createElement('td');
     var locSum = 0;
     for(var loc = 0; loc < locationsArr.length; loc++){
       locSum += locationsArr[loc].locSalesArr[i];
     }
-    thEl.textContent = locSum;
-    trEl.appendChild(thEl);
+    tdEl.textContent = locSum;
+    trEl.appendChild(tdEl);
   }
 
   //Writing the total at the end
