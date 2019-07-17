@@ -14,13 +14,13 @@ Index Page
 ☐ typical business stuff; locations, hours, contact info
 
 Sales Page
-☐ Make a table of sales
-    ☐ hours up top locations down the side
-    ☐ total at the end
+✔ Make a table of sales @done (7/16/2019, 3:15:49 PM)
+    ✔ hours up top locations down the side @done (7/16/2019, 3:15:45 PM)
+    ✔ total at the end @done (7/16/2019, 4:24:48 PM)
 
 
 Technical Requirements
 ✔ Remake with a constructor @done (7/16/2019, 2:25:37 PM)
-☐ loop through constructor to build table
-☐ each instance with a sepearte render
-☐ header and footer with a seperate call
+✔ loop through constructor to build table @done (7/16/2019, 3:15:56 PM)
+✔ each instance with a sepearte render @done (7/16/2019, 3:16:01 PM)
+✔ header and footer with a seperate call @done (7/16/2019, 4:24:50 PM)

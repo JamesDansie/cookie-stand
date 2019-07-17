@@ -57,35 +57,10 @@ Location.prototype.cookieCount = function(){
   }
 };
 
-//Render method for lists
-Location.prototype.renderList = function(){
-  this.cookieCount();
-  for(var index = 0; index < time.length; index++){
-    //got this layout from today's notes
-    // render function
-    // three things
-    // 1. create an element - li
-    var liEl = document.createElement('li');
-
-    // 2. give it content - name
-    liEl.textContent = `${time[index]}: ${this.locSalesArr[index]} cookies`;
-
-    // 3. append it to the DOM
-    this.ulEl.appendChild(liEl);
-  }
-  liEl = document.createElement('li');
-
-  // 2. give it content - name
-  liEl.textContent = `Total cookes: ${this.cookieTotalNum}`;
-
-  // 3. append it to the DOM
-  this.ulEl.appendChild(liEl);
-
-
-};
-
 //Render method for tables
 Location.prototype.renderTable = function(){
+  this.cookieCount();
+
   //declaring elements
   var trEl = document.createElement('tr');
   tableEl.appendChild(trEl);
@@ -96,15 +71,15 @@ Location.prototype.renderTable = function(){
   trEl.appendChild(thEl);
 
   //looping through the sale array
-  var tdEl = document.createElement('th');
+  var tdEl = document.createElement('td');
   for(var index = 0; index < time.length; index++){
-    tdEl = document.createElement('th');
+    tdEl = document.createElement('td');
     tdEl.textContent = this.locSalesArr[index];
     trEl.appendChild(tdEl);
   }
 
   //Adding the total at the end
-  tdEl = document.createElement('th');
+  tdEl = document.createElement('td');
   tdEl.textContent = this.cookieTotalNum;
   trEl.appendChild(tdEl);
 };
@@ -134,16 +109,53 @@ function makeHeader(){
   trEl.appendChild(thEl);
 }
 
-new Location('pike', 23, 65, 6.3);
-new Location('sea', 3, 24, 1.2);
-new Location('center', 11, 38, 3.7);
-new Location('capHill', 20, 38, 2.3);
-new Location('alki', 2, 16, 4.6);
+//Makes the Footer
+function makeFooter(){
+  //declaring elements
+  var trEl = document.createElement('tr');
+  tableEl.appendChild(trEl);
 
+  //Writing the first element with 'Sum'
+  var thEl = document.createElement('th');
+  thEl.textContent = 'Sum';
+  trEl.appendChild(thEl);
 
+  //Writing the time stample for the rest of the header
+  for(var i = 0; i < time.length; i++){
+    thEl = document.createElement('th');
+    var locSum = 0;
+    for(var loc = 0; loc < locationsArr.length; loc++){
+      locSum += locationsArr[loc].locSalesArr[i];
+    }
+    thEl.textContent = locSum;
+    trEl.appendChild(thEl);
+  }
+
+  //Writing the total at the end
+  thEl = document.createElement('th');
+  var totSum = 0;
+  for(var loc = 0; loc < locationsArr.length; loc++){
+    totSum += locationsArr[loc].cookieTotalNum;
+  }
+  thEl.textContent = totSum;
+  trEl.appendChild(thEl);
+}
+
+new Location('1st and Pike', 23, 65, 6.3);
+new Location('SeaTac', 3, 24, 1.2);
+new Location('Seattle Center', 11, 38, 3.7);
+new Location('Capital Hill', 20, 38, 2.3);
+new Location('Alki', 2, 16, 4.6);
+
+console.log(locationsArr);
+
+//Make the header
 makeHeader();
 
+//Make the Body
 for(var index = 0; index < locationsArr.length; index++){
-  locationsArr[index].renderList();
   locationsArr[index].renderTable();
 }
+
+//if ambitious make the footer
+makeFooter();
