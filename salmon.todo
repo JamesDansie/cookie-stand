@@ -14,13 +14,12 @@ Index Page
 ☐ typical business stuff; locations, hours, contact info
 
 Sales Page
-✔ Make a table of sales @done (7/16/2019, 3:15:49 PM)
-    ✔ hours up top locations down the side @done (7/16/2019, 3:15:45 PM)
-    ✔ total at the end @done (7/16/2019, 4:24:48 PM)
+☐ add html for a form input. Include the child tags, form, formset, etc.
 
 
-Technical Requirements
-✔ Remake with a constructor @done (7/16/2019, 2:25:37 PM)
-✔ loop through constructor to build table @done (7/16/2019, 3:15:56 PM)
-✔ each instance with a sepearte render @done (7/16/2019, 3:16:01 PM)
-✔ header and footer with a seperate call @done (7/16/2019, 4:24:50 PM)
+JS Requirements
+✔ make an "add element" function @done (7/17/2019, 1:50:33 PM)
+☐ have the form collect the store inputs
+    ☐ include some input validation
+    ☐ include "table" and table element
+☐

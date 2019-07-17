@@ -66,25 +66,26 @@ Location.prototype.renderTable = function(){
   tableEl.appendChild(trEl);
 
   //Writing the first element with the name
-  var thEl = document.createElement('th');
-  thEl.textContent = this.name;
-  trEl.appendChild(thEl);
+  addElement('th', this.name, trEl);
 
   //looping through the sale array
-  var tdEl = document.createElement('td');
   for(var index = 0; index < time.length; index++){
-    tdEl = document.createElement('td');
-    tdEl.textContent = this.locSalesArr[index];
-    trEl.appendChild(tdEl);
+    addElement('td', this.locSalesArr[index], trEl);
   }
 
   //Adding the total at the end
-  tdEl = document.createElement('td');
-  tdEl.textContent = this.cookieTotalNum;
-  trEl.appendChild(tdEl);
+  addElement('td', this.cookieTotalNum, trEl);
 };
 
 //*************Helper Functions */
+
+//Add element function
+function addElement(childElType, childText, ParentEl){
+  var childEl = document.createElement(childElType);
+  childEl.textContent = childText;
+  ParentEl.appendChild(childEl);
+}
+
 //Makes the Header
 function makeHeader(){
   //declaring elements
@@ -92,21 +93,15 @@ function makeHeader(){
   tableEl.appendChild(trEl);
 
   //Writing the first element with 'location'
-  var thEl = document.createElement('th');
-  thEl.textContent = 'Location';
-  trEl.appendChild(thEl);
+  addElement('th', 'Location', trEl);
 
   //Writing the time stample for the rest of the header
   for(var i = 0; i < time.length; i++){
-    thEl = document.createElement('th');
-    thEl.textContent = time[i];
-    trEl.appendChild(thEl);
+    addElement('th', time[i], trEl);
   }
 
-  //Writing the total at the end
-  thEl = document.createElement('th');
-  thEl.textContent = 'Total';
-  trEl.appendChild(thEl);
+  // //Writing the total at the end
+  addElement('th', 'Total', trEl);
 }
 
 //Makes the Footer
@@ -116,30 +111,23 @@ function makeFooter(){
   tableEl.appendChild(trEl);
 
   //Writing the first element with 'Sum'
-  var thEl = document.createElement('th');
-  thEl.textContent = 'Sum';
-  trEl.appendChild(thEl);
+  addElement('th', 'Hourly Total', trEl);
 
-  var tdEl = document.createElement('td');
   //Writing the time stample for the rest of the header
   for(var i = 0; i < time.length; i++){
-    tdEl = document.createElement('td');
     var locSum = 0;
     for(var loc = 0; loc < locationsArr.length; loc++){
       locSum += locationsArr[loc].locSalesArr[i];
     }
-    tdEl.textContent = locSum;
-    trEl.appendChild(tdEl);
+    addElement('td', locSum, trEl);
   }
 
   //Writing the total at the end
-  thEl = document.createElement('th');
   var totSum = 0;
   for(var loc = 0; loc < locationsArr.length; loc++){
     totSum += locationsArr[loc].cookieTotalNum;
   }
-  thEl.textContent = totSum;
-  trEl.appendChild(thEl);
+  addElement('td', totSum, trEl);
 }
 
 new Location('1st and Pike', 23, 65, 6.3);
