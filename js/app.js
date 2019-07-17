@@ -130,6 +130,8 @@ function makeFooter(){
   addElement('td', totSum, trEl);
 }
 
+//***********************Executable Code********************/
+
 new Location('1st and Pike', 23, 65, 6.3);
 new Location('SeaTac', 3, 24, 1.2);
 new Location('Seattle Center', 11, 38, 3.7);
