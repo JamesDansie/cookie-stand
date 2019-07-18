@@ -14,12 +14,12 @@ Index Page
 ☐ typical business stuff; locations, hours, contact info
 
 Sales Page
-☐ add html for a form input. Include the child tags, form, formset, etc.
+✔ add html for a form input. Include the child tags, form, formset, etc. @done (7/17/2019, 2:13:54 PM)
 
 
 JS Requirements
 ✔ make an "add element" function @done (7/17/2019, 1:50:33 PM)
-☐ have the form collect the store inputs
-    ☐ include some input validation
-    ☐ include "table" and table element
-☐
+✔ have the form collect the store inputs @done (7/17/2019, 3:39:18 PM)
+    ✔ include some input validation @done (7/17/2019, 4:05:38 PM)
+    ✔ include "table" and table element @done (7/17/2019, 3:39:13 PM)
+✔ re-render @done (7/17/2019, 3:39:27 PM)

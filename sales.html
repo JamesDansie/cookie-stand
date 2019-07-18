@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-        <h1>Salmon Cookie</h1>
+        <h1>Salmon Cookie Sales Page</h1>
         <div id="nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -20,6 +20,24 @@
             </ul>
         </div>
     </header>
+    <h3>Cookie Stand Form</h3>
+    <form id="cookieForm">
+        <fieldset>
+            <label>Cookie Stand Name</label>
+            <input name="cookieStandName" type="text" /><br/>
+
+            <label>Minimum Customers Per Hour</label>
+            <input name="customersMinPerHour" type="text" /><br/>
+
+            <label>Maximum Customers Per Hour</label>
+            <input name="customersMaxPerHour" type="text" /><br/>
+
+            <label>Average Cookies Per Sale</label>
+            <input name="cookieAvgPerSale" type="text" /><br/>
+
+            <input type="submit" name="submitButton" value="submit" />
+        </fieldset>
+    </form>
     <h3>Cookie Table</h3>
     <table>
         <tbody id="table"></tbody>

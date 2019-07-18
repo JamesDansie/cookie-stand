@@ -22,10 +22,11 @@
 
 var locationsArr = [];
 var tableEl = document.getElementById('table');
+var formEl = document.getElementById('cookieForm');
 var time = ['6 AM', '7AM', '8AM', '9AM', '10AM', '11AM', '12PM', '1PM', '2PM', '3PM', '4PM', '5PM', '6PM', '7PM', '8PM'];
 //*****************Constructor********************
 
-function Location(name, customerMinPerHour, customerMaxPerHour, cookieAverage){
+function CookieLocation(name, customerMinPerHour, customerMaxPerHour, cookieAverage){
   this.name = name;
   this.customerMinPerHourNum = customerMinPerHour;
   this.customerMaxPerHourNum = customerMaxPerHour;
@@ -38,12 +39,12 @@ function Location(name, customerMinPerHour, customerMaxPerHour, cookieAverage){
 
 //**************** Prototype Stuff*****************
 //random number generator
-Location.prototype.getRandomInt = function(min, max) {
+CookieLocation.prototype.getRandomInt = function(min, max) {
   return Math.round(Math.random() * (max-min+1)) + min;
 };
 
 //make a cookie count
-Location.prototype.cookieCount = function(){
+CookieLocation.prototype.cookieCount = function(){
   for(var index = 0; index < time.length; index++) {
     //get random number
     var customersPerHourNum = this.getRandomInt(this.customerMinPerHourNum, this.customerMaxPerHourNum);
@@ -58,7 +59,7 @@ Location.prototype.cookieCount = function(){
 };
 
 //Render method for tables
-Location.prototype.renderTable = function(){
+CookieLocation.prototype.renderTable = function(){
   this.cookieCount();
 
   //declaring elements
@@ -130,11 +131,49 @@ function makeFooter(){
   addElement('td', totSum, trEl);
 }
 
-new Location('1st and Pike', 23, 65, 6.3);
-new Location('SeaTac', 3, 24, 1.2);
-new Location('Seattle Center', 11, 38, 3.7);
-new Location('Capital Hill', 20, 38, 2.3);
-new Location('Alki', 2, 16, 4.6);
+//***********Event Handler*************** */
+//***********************Executable Code********************/
+
+new CookieLocation('1st and Pike', 23, 65, 6.3);
+new CookieLocation('SeaTac', 3, 24, 1.2);
+new CookieLocation('Seattle Center', 11, 38, 3.7);
+new CookieLocation('Capital Hill', 20, 38, 2.3);
+new CookieLocation('Alki', 2, 16, 4.6);
+
+formEl.addEventListener('submit', function(e){
+  e.preventDefault();
+  var username = e.target.cookieStandName.value;
+  var custMin = e.target.customersMinPerHour.value;
+  var custMax = e.target.customersMaxPerHour.value;
+  var cookieAvg = e.target.cookieAvgPerSale.value;
+
+  //convert input to numbers
+  custMin = Number(custMin);
+  custMax = Number(custMax);
+  cookieAvg = Number(cookieAvg);
+
+  //input validation is not NaN = true
+  var test = !isNaN(custMin) && !isNaN(custMax) && !isNaN(cookieAvg);
+  if(test){
+    //delete the last row/footer
+    var i = tableEl.rows.length;
+    //zero based so -1
+    console.log(i-1);
+    tableEl.deleteRow(i-1);
+
+    //Make a new store and render it
+    new CookieLocation(username, custMin, custMax, cookieAvg);
+    //need to redeclare the varible or it points to the wrong location
+    var j = tableEl.rows.length;
+    locationsArr[j-1].renderTable();
+
+    //make a new footer
+    makeFooter();
+  } else {
+    alert('What kind of input is that?!');
+  }
+
+});
 
 console.log(locationsArr);
 
