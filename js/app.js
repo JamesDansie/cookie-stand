@@ -58,7 +58,7 @@ CookieLocation.prototype.cookieCount = function(){
   }
 };
 
-//Render method for tables
+//Render method for tables/body
 CookieLocation.prototype.renderTable = function(){
   this.cookieCount();
 
@@ -78,7 +78,7 @@ CookieLocation.prototype.renderTable = function(){
   addElement('td', this.cookieTotalNum, trEl);
 };
 
-//*************Helper Functions */
+//*************Helper Functions ****************/
 
 //Add element function
 function addElement(childElType, childText, ParentEl){

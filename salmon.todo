@@ -1,9 +1,9 @@
 Initial
-✔ make a branch @done (7/16/2019, 2:04:11 PM)
+☐ make a branch
 
 Index Page
 ☐ wireframe a quick page for the general public
-✔ use the salmon pic @done (7/17/2019, 10:44:44 AM)
+☐ use all the pics
 ☐ colorful, eye catching, color scheme
 ✔ custom google font for highlights @done (7/17/2019, 11:06:28 AM)
 ✔ san-serif for data @done (7/17/2019, 10:46:29 AM)
@@ -11,15 +11,9 @@ Index Page
 ☐ each font is a different color
 ☐ back ground color for default
 ☐ background color for elements
-☐ typical business stuff; locations, hours, contact info
+☐ typical business stuff; locations with addresses, hours, contact info
+☐ mock up references for 'About Us', 'Merch', 'Salmon Events'
 
 Sales Page
-✔ add html for a form input. Include the child tags, form, formset, etc. @done (7/17/2019, 2:13:54 PM)
-
 
 JS Requirements
-✔ make an "add element" function @done (7/17/2019, 1:50:33 PM)
-✔ have the form collect the store inputs @done (7/17/2019, 3:39:18 PM)
-    ✔ include some input validation @done (7/17/2019, 4:05:38 PM)
-    ✔ include "table" and table element @done (7/17/2019, 3:39:13 PM)
-✔ re-render @done (7/17/2019, 3:39:27 PM)
