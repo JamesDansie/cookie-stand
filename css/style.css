@@ -2,8 +2,9 @@
     border: solid 1px;
     font-family: 'Times New Roman', Times, serif
 }
-
-
+/* 
+declaring color pallete so I can quickly change and adjust as needed 
+*/
 :root{
     --salmon-pink:rgb(228, 112, 106);
     --salmon-peach:#FFCDA4;
@@ -29,6 +30,7 @@ div #highlights{
 }
 header{
     width: 100%;
+    background-color: var(--salmon-dark-green);
 }
 #highlights{
     width: 40%;
@@ -41,19 +43,24 @@ h1{
     font-size: 36px;
     text-align: center;
     font-weight: bold;
-    color: var(--salmon-dark-green);
+    color: var(--salmon-peach);
 }
 h2{
     font-size: 24px;
     font-weight: bold;
     padding-top: 12px;
-    clear: both;
     color: var(--salmon-yellow);
 }
 h3{
     font-size: 24px;
     font-weight: bold;
     padding-top: 12px;
+}
+h4{
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 12px;
+    color: var(--salmon-yellow);
 }
 li a{
     float: left;
@@ -79,11 +86,15 @@ th{
     padding: 5px 10px 5px 10px;
 }
 .thirds{
-    width: 30%;
-    height: 100px;
-    background-color:var(--salmon-light-green);
+    text-align: center;
+    width: 27%;
+    background-color:var(--salmon-dark-green);
     padding: 10px;
-    
+    height: 100%;
+}
+.thirds > *{
+    color: var(--salmon-peach);
+    text-align: left;
 }
 ul{
     list-style-type: none;
